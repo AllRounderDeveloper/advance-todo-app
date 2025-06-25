@@ -1,0 +1,9 @@
+# Ignore node_modules in both backend and frontend
+node_modules/
+node_modules/
+
+# Optional: also ignore environment files, logs, build artifacts
+.env
+*.log
+dist/
+build/

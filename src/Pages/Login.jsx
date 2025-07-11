@@ -139,7 +139,7 @@ const LoginPage = () => {
             className="btn btn-outline-success container-fluid"
             type="btn"
             onClick={() => navigate("/signup")}
-            value={" Not have an account? SignUp"}
+            defaultValue={" Not have an account? SignUp"}
           />
         </form>
       )}

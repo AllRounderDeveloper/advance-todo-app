@@ -152,6 +152,7 @@ export const getPagination = async (
   let baseQuery = query(ref, ...qArr);
 
   const snapshot = await getDocs(baseQuery);
+  console.log(snapshot)
 
   let Todos = [];
   snapshot.forEach((doc) => {

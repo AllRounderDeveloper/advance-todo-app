@@ -3,13 +3,12 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA3ShnWj1Qm3I-zwzfs9VDDy_fjORgFgjE",
-  authDomain: "todo-gmz-redux.firebaseapp.com",
-  projectId: "todo-gmz-redux",
-  storageBucket: "todo-gmz-redux.firebasestorage.app",
-  messagingSenderId: "454758858449",
-  appId: "1:454758858449:web:5070ea11953a4fa8f60ff0",
-  measurementId: "G-BKZRMEJH5C",
+  apiKey: "AIzaSyCZbRFLvfifSLOwZ2HZMg-tFtajLnAQwbU",
+  authDomain: "gmz-redux-todo.firebaseapp.com",
+  projectId: "gmz-redux-todo",
+  storageBucket: "gmz-redux-todo.firebasestorage.app",
+  messagingSenderId: "269484963764",
+  appId: "1:269484963764:web:c98edb6f4fa81dbc29a4e1"
 };
 
 export const FirebaseApp = initializeApp(firebaseConfig);

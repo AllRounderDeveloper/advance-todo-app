@@ -147,7 +147,7 @@ const Create = (props) => {
   const submit = (e) => {
     const myFunc = EncodingDesc(e.desc);
     const todo = {
-      sno: Sno,
+      sno: Sno || 1,
       title: e.title,
       desc: myFunc,
       date: date,
@@ -159,7 +159,7 @@ const Create = (props) => {
       lowerTitle: e.title.toLowerCase(),
       decodedDesc: e.desc,
     };
-    dispatch(addTodo({ key: `todos/${userUID}_${Sno}`, data: todo }));
+    dispatch(addTodo({ key: `todos/${userUID}_${Sno || 1}`, data: todo }));
     navigate("/");
     dispatch(fetchHighSno(userUID));
   };

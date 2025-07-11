@@ -27,7 +27,6 @@ const Main = (props) => {
   const ReadingData = useCallback(() => {
     if (user) {
       setTodosState();
-      dispatch(fetchTotalTodos({ uid: user.uid, key: "todos" }));
       dispatch(
         fetchTodos({
           userId: user?.uid,
@@ -39,11 +38,12 @@ const Main = (props) => {
           from,
           to,
         })
-      ).then((res) => {
-        console.log(res)
-        setTodosState(res.payload);
-        setLoading(false);
-      });
+      )
+        .then((res) => {
+          console.log(res);
+          setTodosState(res.payload || []);
+        })
+        .finally(() => setLoading(false));
     }
   }, [
     dispatch,
@@ -68,12 +68,12 @@ const Main = (props) => {
 
   return (
     <main className={`main-main ${props.Theme === "dark" ? " dark" : ""}`}>
-      {Loading || !TodosState || !user ? (
+      <h2 className="text-center">Welcome {usersName ?? "User"}</h2>
+      {Loading || !user ? (
         <div className="loader"></div>
       ) : (
         TodosState && (
           <>
-            <h2 className="text-center">Welcome {usersName}</h2>
             {TodosState.length !== 0 ? (
               <div className="main">
                 {/* Displaying all the todos */}

@@ -27,6 +27,7 @@ const Main = (props) => {
   const ReadingData = useCallback(() => {
     if (user) {
       setTodosState();
+      dispatch(fetchTotalTodos({uid: user.uid, key: "todos"}))
       dispatch(
         fetchTodos({
           userId: user?.uid,
@@ -61,6 +62,7 @@ const Main = (props) => {
     ReadingData();
   }, [ReadingData]);
 
+  console.log(TotalTodos);
   for (let i = 1; i <= Math.ceil((TotalTodos || 0) / postPerPage); i++) {
     Pages.push(i);
   }

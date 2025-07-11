@@ -25,6 +25,7 @@ const TodosDiv = (props) => {
         setCurrentPage(currentPage - 1);
       }
     }
+    props.ReadingData();
   };
 
   // Handling the checkbox

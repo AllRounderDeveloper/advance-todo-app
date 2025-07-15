@@ -26,6 +26,7 @@ const Main = (props) => {
   //Redaing the Total Number of Todos and Todos
   const ReadingData = useCallback(() => {
     if (user) {
+      setLoading(true);
       setTodosState();
       dispatch(fetchTotalTodos({uid: user.uid, key: "todos"}))
       dispatch(

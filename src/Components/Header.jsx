@@ -90,11 +90,7 @@ const Header = (props) => {
                   Add
                 </Link>
               </li>
-              {user.uid === "lNab2SzsY4bw81plNnSnKxrml7o1" && (
-                <Link to="/admin" className="link">Admin</Link>
-              )}
-
-              {user.uid === "vti9nMR6dmXZHoiIfAQiwurOdiJ3" ? (
+              {user.uid === "naC8WqGp2yW8e94GfFsUdYQ7R503" ? (
                 <li>
                   <Link to="/admin" className="link">
                     Admin
